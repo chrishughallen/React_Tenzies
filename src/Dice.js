@@ -1,4 +1,5 @@
 import './Dice.css';
+import {nanoid} from 'nanoid';
 
 export default function Dice (props) {
 
@@ -17,9 +18,10 @@ export default function Dice (props) {
   for (let i = props.value; i > 0; i--) {
     dots.push(<span style={dotStyle} className="dice-dot"></span>)
   }
+
   return(
     <div
-      key={props.id}
+      key={props.keyCode}
       id={props.id}
       className={`dice ${faceClass}`}
       style={style}

@@ -32,7 +32,7 @@ function App() {
       setRolls(0)
     } else {
       setDice((prev) => prev.map((dice) => {
-        return dice.locked ? dice : {...dice, value: generateDiceValue()}
+        return dice.locked ? dice : {...dice, key: nanoid(), value: generateDiceValue()}
       }))
       setRolls(rolls + 1)
     }
@@ -46,6 +46,7 @@ function App() {
 
   useEffect(() => {
     checkForTenzies()
+
   }, [dice])
 
   const lockDie = (id) => {
@@ -58,7 +59,7 @@ function App() {
     return <Dice
       tenzies={tenzies}
       key={dice.id}
-      id={dice.id}
+      keyCode={dice.id}
       toggleLock={() => lockDie(dice.id)}
       locked={dice.locked}
       value={dice.value}
@@ -70,7 +71,6 @@ function App() {
     color: "white",
     border: tenzies ? "2px solid dodgerblue" : "2px solid tomato"
   }
-
 
   return (
     <div className="App">
