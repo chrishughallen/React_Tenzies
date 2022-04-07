@@ -1,0 +1,122 @@
+.dice {
+  font-weight: bold;
+  display: flex;
+  padding: 10px;  
+  width: 104px;  
+  height: 104px;  
+  border-radius: 10%;
+}
+
+.dice-dot {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: dodgerblue;
+}
+
+.dice-1 {
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-2 {
+  justify-content : space-between;
+}
+
+.dice-2 > .dice-dot:last-child {
+  align-self: flex-end
+}
+
+.dice-3 {
+  justify-content: space-between;
+}
+
+.dice-3 > .dice-dot:last-child {
+  align-self: flex-end;
+}
+
+.dice-3 > .dice-dot:nth-child(2) {
+  align-self: center;
+}
+
+.dice-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.dice-4 > .dice-dot:nth-child(2) {
+  justify-self: flex-end;
+}
+
+.dice-4 > .dice-dot:nth-child(3) {
+  align-self: flex-end;
+}
+
+.dice-4 > .dice-dot:nth-child(4) {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.dice-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+.dice-5 > .dice-dot:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: flex-end;
+}
+
+.dice-5 > .dice-dot:nth-child(3) {
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: center;
+  align-self: center;
+}
+
+
+.dice-5 > .dice-dot:nth-child(4) {
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: flex-start;
+  align-self: flex-end;
+}
+
+.dice-5 > .dice-dot:nth-child(5) {
+  grid-row: 3;
+  grid-column: 3;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+
+
+.dice-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dice-6 > .dice-dot:nth-child(even) {
+  justify-self: flex-end;
+} 
+
+.dice-6 > .dice-dot:nth-child(3) {
+  align-self: center;
+}
+
+.dice-6 > .dice-dot:nth-child(4) {
+  align-self: center;
+}
+
+.dice-6 > .dice-dot:nth-child(5) {
+  align-self: flex-end;
+}
+
+.dice-6 > .dice-dot:nth-child(6) {
+  align-self: flex-end;
+}
