@@ -65,3 +65,10 @@ button:active {
     transform: rotate(360deg);
   }
 }
+
+
+@media (max-width: 500px) {
+  .game {
+    grid-gap: 1rem;
+  }
+}
